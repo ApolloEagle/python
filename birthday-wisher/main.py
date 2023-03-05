@@ -1,11 +1,6 @@
 import smtplib
 import datetime as dt
 import pandas as pd
-import os
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 # Grab date
 today = dt.datetime.now()
@@ -17,8 +12,8 @@ birthday_dict = {(data_row["month"], data_row["day"])
                   : data_row for (index, data_row) in data.iterrows()}
 
 # SMTP
-email = os.getenv('EMAIL')
-password = os.getenv('PASSWORD')
+email = 'YOUR_EMAIL'
+password = 'YOUR_PASSWORD'
 
 # Send birthday wishes
 if today_tuple in birthday_dict:

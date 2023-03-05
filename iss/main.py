@@ -45,8 +45,8 @@ def is_night():
 
 while True:
     time.sleep(60)
-    email = os.getenv('EMAIL')
-    password = os.getenv('PASSWORD')
+    email = 'YOUR_EMAIL'
+    password = 'YOUR_PASSWORD'
 
     if in_view() and is_night():
         with smtplib.SMTP('smtp.gmail.com', port=587) as connection:
