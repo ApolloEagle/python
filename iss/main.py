@@ -1,14 +1,10 @@
 import requests
 from datetime import datetime
-import os
-from dotenv import load_dotenv
 import smtplib
 import time
 
-load_dotenv()
-
-MY_LAT = os.getenv('LAT')
-MY_LONG = os.getenv('LONG')
+MY_LAT = 'YOUR_LAT'
+MY_LONG = 'YOUR_LONG'
 
 
 def in_view():
