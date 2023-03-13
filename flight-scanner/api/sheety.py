@@ -12,18 +12,26 @@ class SheetyAPI:
 
     def get(self):
         response = requests.get(url=self.url, headers=self.header)
+        response.raise_for_status()
+
         return response.json()
 
     def post(self, payload):
         response = requests.post(
             url=self.url, json=payload, headers=self.header)
+        response.raise_for_status()
+
         return response.json()
 
     def put(self, payload, id):
         response = requests.put(
             url=f'{self.url}/{id}', json=payload, headers=self.header)
+        response.raise_for_status()
+
         return response.json()
 
     def delete(self, id):
         response = requests.delete(url=f'{self.url}/{id}', headers=self.header)
+        response.raise_for_status()
+
         return response.json()
